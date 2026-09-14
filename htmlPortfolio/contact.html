@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{Berry portfolio}}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    
+    <div class="main textPage">
+      <div class="contact-wrapper">
+        <!-- Left Info Column -->
+        <div class="contact-info">
+          <p>Christchurch New Zealand</p>
+          <p>0224603433</p>
+          <p><a href="mailto:thomasmathewmartin@Gmail.com">ThomasMathewMartin@gmail.com</a></p>
+
+          <div class="find-me">
+            <p>Find Me Online:</p>
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Right Form Column -->
+        <div class="contact-form">
+          <h1>Contact</h1>
+
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+              <label for="comments">Comments</label>
+              <textarea id="comments" name="comments"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="./scripts/make_header_footer.js" async defer></script>
+  </body>
+</html>

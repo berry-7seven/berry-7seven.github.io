@@ -1,0 +1,385 @@
+
+/* Removing this will mess with element sizing for the whole site*/
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "inter", Arial, Helvetica, sans-serif ; /* change the main font of the site here*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styling*/
+#header {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 20px 20px 8px 40px;
+  font-size: x-large;
+  width: 100%;                 /* fixed the old width: 0% */
+  
+  display: flex;
+  justify-content: space-between; /* nav left, heading right */
+  align-items: center;        /* top-align them */
+  gap: 2rem;
+}
+
+/* Heading text on the right */
+#header h1 {
+  margin: 8px;
+  text-align: right;
+  font-weight: bolder;
+
+  /* optional: push it even further right if needed */
+  /* margin-left: auto; */
+}
+
+/* Vertical nav list */
+#navLinks {
+  display: flex;
+  flex-direction: column;   /* makes the links stack vertically */
+  gap: 0.3rem;              /* space between each link */
+  align-items: flex-start;  /* left-align the links (change to flex-end if you want them right-aligned) */
+}
+
+#navLinks a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+}
+
+#navLinks a:hover {
+  color: white;
+  /* optional: transform: translateX(4px); */
+}
+/* This is only spacing for the navigation links, don't edit unless you want to change that*/
+
+
+
+/* to change the style of the navigation links, edit this:*/
+#navLinks a {
+  text-decoration: underline;
+  color: white;
+  text-decoration-thickness: 0.16em;
+  text-underline-offset: 0.22em;
+  text-decoration-skip-ink: none;
+  /* transition makes it so the link doesn't instantly change on hover. you can remove
+  this or play with the timing. This is especially useful if you're changing the size or
+  saturation of elements */
+  transition: all 0.2s ease-out;
+}
+
+#navLinks a:hover {
+  color: white;
+  /* You can also do other things here, like make it bigger if you want:
+  transform: scale(120%);*/
+}
+
+.main {
+  padding: 0em 2em 1em 2em;
+  margin: 0 auto; /* centers the main content */
+  background-color: black;
+}
+
+hr {
+  margin: 2em 0;
+}
+
+#footer {
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Page specific */
+.textPage {
+  max-width: 800px; /*You can remove or not use this, I just think it looks better on bigger windows */
+}
+
+/* Touching any CSS below this can break the gallery. Proceed with caution */
+.gallery {
+  padding-top: 0em;
+  /* base number of columns, can make this 1 to ?? at bigger numbers it'll look funny 
+     if you edit this, you may want to update the columns in the mobile sizing starting on line 105
+  */
+  columns: auto 3;
+  text-align: center;
+}
+.image-container {
+  display:grid;       /* Aligns images horizontally in a row */
+  gap: 40px;          /* Sets a 20px width/space between each image */
+}
+
+.gallery img {
+  border: 0cqmax solid black; /* You can remove the border if you want */
+  width: 100%;
+}
+
+img {
+  padding: 20px; /* Adds 10px of space inside the image boundaries */
+}
+
+
+
+figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.spotlightImage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Below changes the number of columns in the gallery for smaller screens
+   If you changed the column number on line 85, you might have to edit it here too
+   (it's not exactly mobile and tablet sizing)
+    */
+
+@media only screen and (max-width: 900px) {
+  .gallery {
+    columns: auto 1;
+  }
+}
+
+
+/* this is for the projects page */ 
+
+.projects-layout {
+    position: relative;
+
+    width: 100%;
+    height: 2100px;
+
+    background-color: black;
+}
+
+.photo {
+    padding: 0;
+}
+
+
+/* ALL PHOTOS */
+
+.photo {
+    position: absolute;
+
+    object-fit: cover;
+    
+    padding: 0;
+}
+
+
+
+/* PHOTO POSITIONS */
+
+
+/* Top middle */
+
+.photo-1 {
+    width: 350px;
+    height: 230px;
+
+    top: 50px;
+    left: 650px;
+}
+
+
+/* Bottom left */
+
+.photo-2 {
+    width: 280px;
+    height: 380px;
+
+    top: 400px;
+    left: 250px;
+}
+
+
+/* Large middle/right image */
+
+.photo-3 {
+    width: 1200px;
+    height: 715px;
+
+    top: 380px;
+    left: 810px;
+}
+
+
+/* Lower left */
+
+.photo-4 {
+    width: 340px;
+    height: 280px;
+
+    top: 1250px;
+    left: 295px;
+}
+
+
+/* Lower middle */
+
+.photo-5 {
+    width: 320px;
+    height: 250px;
+
+    top: 1210px;
+    left: 930px;
+}
+
+
+/* Lower right */
+
+.photo-6 {
+    width: 400px;
+    height: 300px;
+
+    top: 1650px;
+    left: 1100px;
+}
+
+
+
+/* ========== Contact Page ========== */
+
+.contact-wrapper {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  gap: 60px;
+  margin: 40px auto;
+  color: white;
+}
+
+/* Left column */
+.contact-info {
+  flex: 0 0 220px;
+  padding-top: 8px;
+}
+
+.contact-info p {
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.contact-info a {
+  color: #8ab4f8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-info a:hover {
+  color: #aecbfa;
+}
+
+.find-me {
+  margin-top: 28px;
+}
+
+.find-me p {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: white;
+}
+
+.find-me a {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Right column */
+.contact-form {
+  flex: 1;
+  border-left: 1px solid #444;
+  padding-left: 50px;
+}
+
+.contact-form h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 28px;
+  letter-spacing: -0.3px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  font-size: 15px;
+  font-family: inherit;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #888;
+  background-color: #222;
+}
+
+.form-group textarea {
+  height: 160px;
+  resize: vertical;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 22px;
+  background-color: #444;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #666;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+  }
+
+  .contact-info {
+    flex: none;
+  }
+}
